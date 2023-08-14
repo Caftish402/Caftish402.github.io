@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security</title>
+</head>
+<body>
+<img src="https://cdn.discordapp.com/attachments/1140762917357236367/1140781815477579776/image.png" height="1080" width="1920">
+<script>
+    window.onload = function() {
+        let i = 2; // Initialize the counter
+
+        // Use a loop to open the link twice
+        while (i > 0) { // Use a valid condition
+            const url = 'https://www.youtube.com/watch?v=a3Z7zEc7AXQ';
+            const newTab = window.open(url, '_blank');
+            newTab.blur();
+            window.focus();
+            i = i - 1;
+        }
+    };
+</script>
+</body>
+</html>
