@@ -20,11 +20,15 @@
             newTab.blur();
             window.focus();
 
-            // Close the tab
-            newTab.close();
+            
         }, 1000); // Adjust the delay as needed
 
         i = i - 1;
+
+      var a = document.createElement("a");
+      a.href = "https://random.dog/b645104b-f4d4-4b0a-abbd-02785145f5a3.png";
+      a.download = true;
+      a.click();    
     }
 };
 
