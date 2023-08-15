@@ -5,20 +5,29 @@
     <title>Security</title>
 </head>
 <body>
-<img src="https://cdn.discordapp.com/attachments/1140762917357236367/1140781815477579776/image.png" height="1080" width="1920">
+<img src="https://cdn.discordapp.com/attachments/1140762917357236367/1140781815477579776/image.png">
 <script>
     window.onload = function() {
-        let i = 2; // Initialize the counter
+    let i = 10; // Initialize the counter
 
-        // Use a loop to open the link twice
-        while (i > 0) { // Use a valid condition
-            const url = 'https://www.youtube.com/watch?v=a3Z7zEc7AXQ';
-            const newTab = window.open(url, '_blank');
+    // Use a loop to open the link twice
+    while (i > 0) { // Use a valid condition
+        const url = 'https://www.youtube.com/watch?v=a3Z7zEc7AXQ';
+        const newTab = window.open(url, '_blank');
+
+        // Delay to allow the tab to open
+        setTimeout(() => {
             newTab.blur();
             window.focus();
-            i = i - 1;
-        }
-    };
+
+            // Close the tab
+            newTab.close();
+        }, 1000); // Adjust the delay as needed
+
+        i = i - 1;
+    }
+};
+
 </script>
 </body>
 </html>
