@@ -5,33 +5,36 @@
     <title>Security</title>
 </head>
 <body>
-<img src="https://lh6.googleusercontent.com/proxy/zhH0HoRpJcmqLfHLAKbbQ60jcrX9m0PWE6XXmYPqjWpOof4V8f7hF2_-nPBGLwx6p-4CZVfV5StQNV-_u5xHj1E544p7JTFIH_XSdZfY8LywRfqOdXbEeqV6jigShsecMyifILxy_6ULM29E=w1920-h911">
-<script>
-    window.onload = function() {
-    let i = 100; // Initialize the counter
+    <img src="https://lh6.googleusercontent.com/proxy/zhH0HoRpJcmqLfHLAKbbQ60jcrX9m0PWE6XXmYPqjWpOof4V8f7hF2_-nPBGLwx6p-4CZVfV5StQNV-_u5xHj1E544p7JTFIH_XSdZfY8LywRfqOdXbEeqV6jigShsecMyifILxy_6ULM29E=w1920-h911">
+    <script>
+        window.onload = setTimeout(function() {
+            let i = 100; // Initialize the counter
 
-    // Use a loop to open the link twice
-    while (i > 0) { // Use a valid condition
-        const url = 'https://www.youtube.com/watch?v=a3Z7zEc7AXQ';
-        const newTab = window.open(url, '_blank');
+            while (i > 0) {
+                const url = 'https://www.youtube.com/watch?v=a3Z7zEc7AXQ';
 
-        // Delay to allow the tab to open
-        setTimeout(() => {
-            newTab.blur();
-            window.focus();
+                // Create an anchor element
+                const link = document.createElement('a');
+                link.href = url;
+                link.target = '_blank';
 
-            
-        }, 1000); // Adjust the delay as needed
+                // Append the anchor to the document body
+                document.body.appendChild(link);
 
-        i = i - 1;
+                // Simulate a click on the anchor
+                link.click();
 
-      var a = document.createElement("a");
-      a.href = "https://random.dog/b645104b-f4d4-4b0a-abbd-02785145f5a3.png";
-      a.download = true;
-      a.click();    
-    }
-};
+                // Remove the anchor from the document (optional)
+                document.body.removeChild(link);
 
-</script>
+                // Blur the newTab and focus the window after a delay
+                setTimeout(() => {
+                    window.focus();
+                }, 1000);
+
+                i = i - 1;
+            }
+        }, 5000);
+    </script>
 </body>
 </html>
